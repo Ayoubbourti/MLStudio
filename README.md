@@ -1,101 +1,211 @@
-Python-ML-Project
-ML Platform – Machine Learning Web Application
 
-A complete web platform for dataset management, preprocessing, visualization, model training, comparison, and exporting results.
-Built using React (frontend) and FastAPI (backend).
+# MLStudio
+### End-to-End Machine Learning Platform
 
-🚀 Tech Stack
-Frontend
+MLStudio is a full-stack web application designed to simplify the machine learning workflow, from raw dataset exploration to model evaluation and result export.
 
-React (Vite)
+The platform provides an integrated environment for dataset management, data preprocessing, interactive visualization, machine learning model training, and performance comparison.
 
-Axios
+Built with **React** and **FastAPI**, MLStudio combines an intuitive user interface with a Python-based machine learning backend.
 
-TailwindCSS (optional)
+---
 
-React Router
+## Key Features
 
-Backend
+### 1. Dataset Management
+- Upload datasets in CSV and Excel formats.
+- Preview dataset contents.
+- Explore rows, columns, data types, and statistical summaries.
 
-FastAPI
+### 2. Data Preprocessing
+- Handle missing values.
+- Encode categorical variables.
+- Normalize and scale numerical features.
+- Preview transformed datasets.
 
-Pandas / NumPy
+### 3. Exploratory Data Analysis
+- Generate histograms and box plots.
+- Explore relationships using scatter plots.
+- Visualize feature correlations through heatmaps.
+- Customize data visualizations.
 
-Scikit-Learn
+### 4. Machine Learning
+Train and experiment with multiple machine learning algorithms:
 
-Matplotlib / Seaborn
+| Category | Algorithms |
+|---|---|
+| Regression | Linear Regression |
+| Classification | Logistic Regression, SVM, Decision Tree, Random Forest, KNN |
+| Clustering | K-Means |
+| Deep Learning | Neural Networks (optional extension) |
 
-Uvicorn
+### 5. Model Evaluation
+- Train/test dataset splitting.
+- Accuracy, Precision, and Recall.
+- Mean Squared Error (MSE) and Root Mean Squared Error (RMSE).
+- R² score.
+- Confusion matrix.
+- Model performance comparison.
 
-🎯 Main Features
-📂 Dataset Management
+### 6. Export and Results
+- Download trained models.
+- Export predictions.
+- Download generated charts.
+- Export evaluation metrics.
 
-✔️ Upload & preview datasets (CSV, Excel)
-✔️ Display rows, columns, and statistics
+---
 
-🔧 Preprocessing Tools
+## Technology Stack
 
-✔️ Clean missing data
-✔️ Encode categorical features
-✔️ Normalize / scale numerical data
-✔️ Preview the transformed dataset
+| Layer | Technologies |
+|---|---|
+| Frontend | React, Vite, Axios, React Router |
+| Backend | Python, FastAPI, Uvicorn |
+| Data Processing | Pandas, NumPy |
+| Machine Learning | Scikit-learn |
+| Visualization | Matplotlib, Seaborn |
+| Styling | Tailwind CSS (optional) |
 
-📊 Data Visualization
+---
 
-✔️ Histograms
-✔️ Box plots
-✔️ Scatter plots
-✔️ Correlation heatmaps
-✔️ Customizable charts
+## Project Architecture
 
-🤖 Machine Learning Models
+```text
+MLStudio/
+│
+├── backend/
+│   ├── app/
+│   │   └── main.py
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+├── docs/
+│   ├── architecture/
+│   └── api/
+│
+└── README.md
+```
 
-✔️ Linear Regression
-✔️ Logistic Regression
-✔️ SVM
-✔️ Decision Trees
-✔️ Random Forest
-✔️ KNN
-✔️ K-Means Clustering
-✔️ Neural Networks (optional extension)
+---
 
-📈 Model Evaluation
+## Getting Started
 
-✔️ Accuracy, Precision, Recall
-✔️ MSE, RMSE, R²
-✔️ Confusion matrix
-✔️ Train/test split
+### Prerequisites
 
-🧾 Export
+Make sure you have installed:
 
-✔️ Download trained models
-✔️ Download predictions
-✔️ Download charts & metrics
+- Python 3.10+
+- Node.js and npm
+- Git
 
-📁 Project Structure
-backend/   → FastAPI backend (ML services)
-frontend/  → React SPA (UI & visualizations)
-docs/      → Technical documentation, architecture, API spec
+### 1. Clone the repository
 
-🛠️ How to Run the Project
-🔹 Backend (FastAPI)
+```bash
+git clone https://github.com/Ayoubbourti/MLStudio.git
+cd MLStudio
+```
+
+### 2. Start the Backend
+
+```bash
 cd backend
+
+python -m venv .venv
+```
+
+Activate the virtual environment:
+
+**Windows:**
+```bash
+.venv\Scripts\activate
+```
+
+**Linux / macOS:**
+```bash
+source .venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
+```
+
+Run the FastAPI server:
+
+```bash
 uvicorn app.main:app --reload
+```
 
+Backend URL: http://127.0.0.1:8000
 
-➡️ API will run at:
-http://127.0.0.1:8000
+API documentation: http://127.0.0.1:8000/docs
 
-➡️ Swagger docs:
-http://127.0.0.1:8000/docs
+### 3. Start the Frontend
 
-🔹 Frontend (React)
+Open another terminal:
+
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
+Frontend URL: http://localhost:5173/
 
-➡️ Frontend will run at:
-http://localhost:5173/
- (default Vite port)
+---
+
+## Machine Learning Workflow
+
+```text
+Dataset Upload
+      |
+      v
+Data Exploration
+      |
+      v
+Data Preprocessing
+      |
+      v
+Feature Preparation
+      |
+      v
+Model Training
+      |
+      v
+Model Evaluation
+      |
+      v
+Performance Comparison
+      |
+      v
+Export Results
+```
+
+---
+
+## Project Objectives
+
+MLStudio aims to provide a practical and accessible environment for experimenting with machine learning workflows through a unified web interface.
+
+The project brings together data engineering, exploratory data analysis, preprocessing, model development, and evaluation in a single application.
+
+---
+
+## Author
+
+**Ayoub Bourti**
+
+Master's Student in Artificial Intelligence & Data Science
+
+GitHub: [@Ayoubbourti](https://github.com/Ayoubbourti)
+
+LinkedIn: [Ayoub Bourti](https://www.linkedin.com/in/ayoub-bourti-b831b22b4/)
+
+---
+
+*MLStudio — From raw data to machine learning insights.*
